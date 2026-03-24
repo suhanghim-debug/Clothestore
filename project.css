@@ -3,16 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background-color: antiquewhite;
     color: #222;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    line-height: 1.6;
 }
 h1, h2 {
     text-align: center;
@@ -32,36 +28,37 @@ p {
     margin-bottom: 15px;
     text-align: center;
 }
-  header {
+header{
   background: linear-gradient(135deg, #2f4f4f, #3b6f6b);
   padding: 15px 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}       
-header h1 {
+}    
+   
+header h1{
   color: #fff;
   font-size: 32px;
   letter-spacing: 1px;          
 }
+
 header h1 span {
   color: #ff7a00;
 }
-nav ul {
+nav ul{
     list-style: none;
     display: flex;
     gap: 25px;
 }
-nav a {
+nav a{
   color: #fff;
   margin-left: 30px;
   text-decoration: none;
   font-weight: 500;
   position: relative;
 }
-
-nav a::after {
+nav a::after{
   content: "";
   position: absolute;
   width: 0%;
@@ -71,21 +68,21 @@ nav a::after {
   background: #ff7a00;
   transition: 0.3s;
 }
-
-nav a:hover::after {
+nav a:hover::after{
   width: 100%;
-}   
-section {
+}
+section{
   padding: 80px 8%;
 }
-
-section h2 {
+section h2{
   text-align: center;
   font-size: 34px;
   margin-bottom: 50px;
-}
-            
-nav ul li a {
+}      
+section h2 span{
+  color: orange;
+} 
+nav ul li a{
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -100,8 +97,16 @@ nav ul li a {
     border-radius: 10px;
     text-align: center;
 }
+.line{
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+  background-size: cover;
+  background-position:center;
+  color:white;
+  text-align:center;
+  padding:120px 20px;
+}
 .btn,
-button {
+button{
     display: inline-block;
     padding: 12px 24px;
     background-color: #ff7b00;
@@ -112,25 +117,21 @@ button {
     border: none;
     cursor: pointer;
     margin: 20px auto;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
-
 .btn:hover,
 button:hover {
     background-color: #e66f00;
     transform: scale(1.05);  
 }
-.products {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;     
+.products{
   max-width: 1200px;
   margin: 40px auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 40px;
 }
-.product {
+.product{
   background: white;
   border-radius: 16px;
   padding: 20px;
@@ -139,16 +140,16 @@ button:hover {
   transition: 0.3s ease;
 }
 
-.product:hover {
+.product:hover{
   transform: translateY(-8px);
   box-shadow: 0 20px 45px rgba(0,0,0,0.15);
 }
-.product img {
+.product img{
   width: 100%;
   height: 260px;
   object-fit: cover;
   border-radius: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 15px; 
 }
 .product p:first-of-type {
   font-size: 18px;
@@ -202,7 +203,7 @@ button:hover {
 .about p {
   font-size: 18px;
   line-height: 1.7;
-  color: #ffffff;
+  color: black;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -245,6 +246,7 @@ button:hover {
   border: 1px solid #ccc;
   font-size: 16px;
   outline: none;
+  transition: all 0.3s ease;
 }
 
 .contact textarea {
@@ -326,24 +328,4 @@ footer{
 }
 .footer-social a:hover{
     transform: scale(1,1.2);
-}
-@media (max-width: 768px) {
-
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .products {
-        padding: 20px;
-    }
-
-    .about {
-        padding: 40px 20px;
-    }
 }
